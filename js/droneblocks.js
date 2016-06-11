@@ -46,7 +46,8 @@ function getMobileOS() {
 
 function previewMission() {
   
-  var code = Blockly.JavaScript.workspaceToCode(workspace);
+  // Since we no longer require takeoff block we're prepending mission here
+  var code = 'var mission="";' + Blockly.JavaScript.workspaceToCode(workspace);
   code = eval(code);
   
   var os = getMobileOS();

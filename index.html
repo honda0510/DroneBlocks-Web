@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="droneblocks.appcache">
+<html manifest="">
 <html>
 <head>
   <meta charset="utf-8">
@@ -21,6 +21,7 @@
   <script src="./blockly/blocks/droneblocks/hover.js"></script>
   <script src="./blockly/blocks/droneblocks/yaw_right.js"></script>
   <script src="./blockly/blocks/droneblocks/yaw_left.js"></script>
+  <script src="./blockly/blocks/droneblocks/spin.js"></script>
   <script src="./blockly/blocks/droneblocks/photo.js"></script>
   <script src="./blockly/blocks/droneblocks/photo_interval.js"></script>
   <script src="./blockly/blocks/droneblocks/pitch_gimbal.js"></script>
@@ -41,12 +42,18 @@
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
-    var config = {
+    /*var config = {
       apiKey: "AIzaSyBcbAt69BGUjPiOucQbkcNNbcdaSmE-G0o",
       authDomain: "fiery-inferno-4972.firebaseapp.com",
       databaseURL: "https://fiery-inferno-4972.firebaseio.com",
       storageBucket: "",
-    };
+    };*/
+      var config = {
+          apiKey: "AIzaSyAGgqla_TWV4wVgaQ87HG3VDT0igLA8KhU",
+          authDomain: "droneblocks-staging.firebaseapp.com",
+          databaseURL: "https://droneblocks-staging.firebaseio.com",
+          storageBucket: "droneblocks-staging.appspot.com",
+        };
     firebase.initializeApp(config);
   </script>
 </head>
@@ -141,6 +148,13 @@
         <value name="angle">
           <block type="math_number">
             <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="spin">
+        <value name="times">
+          <block type="math_number">
+            <field name="NUM">3</field>
           </block>
         </value>
       </block>

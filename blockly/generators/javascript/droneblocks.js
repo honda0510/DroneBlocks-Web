@@ -1,6 +1,6 @@
 Blockly.JavaScript['takeoff'] = function(block) {
   var altitude = block.getFieldValue("altitude");
-  return 'var mission=""; mission+="takeoff,' + altitude + '|";';
+  return 'mission+="takeoff,' + altitude + '|";';
 };
 
 Blockly.JavaScript['flight_path'] = function(block) {
@@ -48,6 +48,17 @@ Blockly.JavaScript['yaw_left'] = function(block) {
     return 'mission+="yaw_left," + eval(' + angle + ') + "|";';
   } else {
     return 'mission+="yaw_left,' + angle + '|";';
+  }
+};
+
+Blockly.JavaScript['spin'] = function(block) {
+  var direction = block.getFieldValue("direction");
+  var times = Blockly.JavaScript.valueToCode(block, 'times', Blockly.JavaScript.ORDER_NONE);
+
+  if(isNaN(parseInt(times))) {
+    return 'mission+="spin,' + direction + '," + eval(' + times + ') + "|";';
+  } else {
+    return 'mission+="spin,' + direction + ',' + times + '|";';
   }
 };
 

@@ -16,6 +16,7 @@ blockly/blocks/droneblocks/land_home.js
 blockly/blocks/droneblocks/hover.js
 blockly/blocks/droneblocks/yaw_right.js
 blockly/blocks/droneblocks/yaw_left.js
+blockly/blocks/droneblocks/spin.js
 blockly/blocks/droneblocks/photo.js
 blockly/blocks/droneblocks/photo_interval.js
 blockly/blocks/droneblocks/pitch_gimbal.js

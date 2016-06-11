@@ -31,6 +31,12 @@ Blockly.Python['yaw_left'] = function(block) {
   return 'yawLeft(' + angle + ');\n';
 };
 
+Blockly.Python['spin'] = function(block) {
+  var direction = block.getFieldValue("direction");
+  var times = Blockly.Python.valueToCode(block, 'times', Blockly.JavaScript.ORDER_NONE);
+  return 'spin("' + direction + '", ' + times +');\n';
+};
+
 Blockly.Python['photo'] = function(block) {
   return 'takePhoto();\n';
 };
@@ -47,7 +53,7 @@ Blockly.Python['fly_forward'] = function(block) {
 
 Blockly.Python['video'] = function(block) {
   var action = block.getFieldValue("video_status");
-  return 'video(' + action + ');\n';
+  return 'video("' + action + '");\n';
 };
 
 Blockly.Python['change_altitude'] = function(block) {
