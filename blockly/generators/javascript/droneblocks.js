@@ -66,6 +66,27 @@ Blockly.JavaScript['photo'] = function(block) {
   return 'mission+="photo|";';
 };
 
+Blockly.JavaScript['photo_interval'] = function(block) {
+  var num_photos = Blockly.JavaScript.valueToCode(block, 'num_photos', Blockly.JavaScript.ORDER_NONE);
+  var seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_NONE);
+  var mission = 'mission+="photo_interval,';
+  
+  if(isNaN(parseInt(num_photos))) {
+    mission = mission + '" + eval(num_photos) + ","';
+  } else {
+    mission = mission + num_photos + ",";
+  }
+  
+  if(isNaN(parseInt(seconds))) {
+    mission = mission + ' + eval(seconds) ';
+  } else {
+    mission = mission + seconds + '|";';
+  }
+  
+  return mission;
+  
+};
+
 Blockly.JavaScript['pitch_gimbal_to'] = function(block) {
   var angle = block.getFieldValue("angle");
   return 'mission+="pitch_gimbal,' + angle + '|";';

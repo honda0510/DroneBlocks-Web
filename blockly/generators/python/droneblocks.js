@@ -41,6 +41,12 @@ Blockly.Python['photo'] = function(block) {
   return 'takePhoto();\n';
 };
 
+Blockly.Python['photo_interval'] = function(block) {
+  var num_photos = Blockly.Python.valueToCode(block, 'num_photos', Blockly.JavaScript.ORDER_NONE);
+  var seconds = Blockly.Python.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_NONE);
+  return 'photoInterval(' + num_photos + ', ' + seconds +');\n';
+};
+
 Blockly.Python['pitch_gimbal_to'] = function(block) {
   var angle = block.getFieldValue("angle");
   return 'pitchGimbal(' + angle + ');\n';
