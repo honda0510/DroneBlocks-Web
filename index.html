@@ -160,7 +160,13 @@
       </block>
     </category>
     <category name="Camera">
-      <block type="pitch_gimbal_to"></block>
+      <block type="pitch_gimbal_to">
+        <value name="angle">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
       <block type="photo"></block>
       <block type="photo_interval">
         <value name="num_photos">

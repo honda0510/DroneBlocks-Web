@@ -48,7 +48,7 @@ Blockly.Python['photo_interval'] = function(block) {
 };
 
 Blockly.Python['pitch_gimbal_to'] = function(block) {
-  var angle = block.getFieldValue("angle");
+  var angle = Blockly.Python.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_NONE);
   return 'pitchGimbal(' + angle + ');\n';
 };
 

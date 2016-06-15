@@ -88,7 +88,7 @@ Blockly.JavaScript['photo_interval'] = function(block) {
 };
 
 Blockly.JavaScript['pitch_gimbal_to'] = function(block) {
-  var angle = block.getFieldValue("angle");
+  var angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_NONE);
   return 'mission+="pitch_gimbal,' + angle + '|";';
 };
 
