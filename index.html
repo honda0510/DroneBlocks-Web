@@ -16,6 +16,7 @@
   <script src="./blockly/generators/python/droneblocks.js"></script>
   <script src="./blockly/msg/js/en.js"></script>
   <script src="./blockly/blocks/droneblocks/takeoff.js"></script>
+  <script src="./blockly/blocks/droneblocks/landing_gear.js"></script>
   <script src="./blockly/blocks/droneblocks/land.js"></script>
   <script src="./blockly/blocks/droneblocks/land_home.js"></script>
   <script src="./blockly/blocks/droneblocks/hover.js"></script>
@@ -114,6 +115,7 @@
       <block type="takeoff"></block>
       <!--<block type="flight_path"></block>-->
       <!--<block type="heading_mode"></block>-->
+      <block type="landing_gear"></block>
     </category>
     <category name="Navigation">
       <block type="fly_forward">
@@ -168,7 +170,7 @@
         </value>
       </block>
       <block type="photo"></block>
-      <block type="photo_interval">
+      <!--<block type="photo_interval">
         <value name="num_photos">
           <block type="math_number">
             <field name="NUM">5</field>
@@ -179,7 +181,7 @@
             <field name="NUM">5</field>
           </block>
         </value>
-      </block>
+      </block>-->
       <block type="video"></block>
     </category>
     <category name="Loops">

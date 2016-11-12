@@ -86,28 +86,31 @@ function closeCodeView() {
   $("#codeViewButton a").html("{ Code }");
 }
 
-var blockIndex = 0;
-
 function highlightBlock(id) {
   var id = parseInt(id); // This is the index of the waypoint block we're highlighting
+  
+  if(id < 0) {
+    Blockly.selected.unselect();
+    return;
+  }
+  
   var blocks = Blockly.mainWorkspace.getAllBlocks();
   
-  // Now let's loop until we find the next waypoint
-  for(var i=blockIndex; i<=blocks.length; i++) {
+  var totalBlocks = blocks.length;
+  
+  var type = blocks[id].type;
+ 
+  // Remove blocks that we don't want to end up getting highlighted
+  for(var i = 0; i < blocks.length; i++) {
     var type = blocks[i].type;
-    
-    blockIndex++;
-    
-    if(type == "takeoff" || type == "fly_forward" || type == "change_altitude" || type == "land") {
-      blocks[i].select();
-      
-      if(type == "land") {
-        blockIndex = 0; // Reset the block index
-      }
-      
-      break;
+    if(type == "math_number" || type == "variables_set") {
+      console.log(type);
+      blocks.splice(i, 1);
     }
   }
+
+  blocks[id].select();
+  
 }
 
 function highlightBlockFromAndroid(id) {

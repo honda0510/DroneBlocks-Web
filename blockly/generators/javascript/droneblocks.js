@@ -3,6 +3,11 @@ Blockly.JavaScript['takeoff'] = function(block) {
   return 'mission+="takeoff,' + altitude + '|";';
 };
 
+Blockly.JavaScript['landing_gear'] = function(block) {
+  var direction = block.getFieldValue("direction");
+  return 'mission+="landing_gear,' + direction + '|";';
+};
+
 Blockly.JavaScript['flight_path'] = function(block) {
   var path = block.getFieldValue("path");
   return 'mission+="flight_path,' + path + '|";';
