@@ -14,23 +14,17 @@
   <script src="./blockly/generators/javascript/droneblocks.js"></script>
   <script src="./blockly/generators/python/droneblocks.js"></script>
   <script src="./blockly/msg/js/en.js"></script>
-  <script src="./blockly/blocks/droneblocks/takeoff.js"></script>
-  <script src="./blockly/blocks/droneblocks/land.js"></script>
-  <script src="./blockly/blocks/droneblocks/land_home.js"></script>
-  <script src="./blockly/blocks/droneblocks/hover.js"></script>
-  <script src="./blockly/blocks/droneblocks/yaw_right.js"></script>
-  <script src="./blockly/blocks/droneblocks/yaw_left.js"></script>
-  <script src="./blockly/blocks/droneblocks/photo.js"></script>
-  <script src="./blockly/blocks/droneblocks/photo_interval.js"></script>
-  <script src="./blockly/blocks/droneblocks/pitch_gimbal.js"></script>
-  <script src="./blockly/blocks/droneblocks/fly_forward.js"></script>
-  <script src="./blockly/blocks/droneblocks/change_altitude.js"></script>
-  <script src="./blockly/blocks/droneblocks/video.js"></script>
-  <script src="./blockly/blocks/droneblocks/video_duration.js"></script>
-  <script src="./blockly/blocks/droneblocks/orbit.js"></script>
-  <script src="./blockly/blocks/droneblocks/loop_with_variable.js"></script>
-  <script src="./blockly/blocks/droneblocks/follow.js"></script>
-  <link rel="stylesheet" type="text/css" href="./css/droneblocks.css">
+  <script src="./blockly/blocks/tello/takeoff.js"></script>
+  <script src="./blockly/blocks/tello/land.js"></script>
+  <script src="./blockly/blocks/tello/fly_forward.js"></script>
+  <script src="./blockly/blocks/tello/fly_backward.js"></script>
+  <script src="./blockly/blocks/tello/fly_left.js"></script>
+  <script src="./blockly/blocks/tello/fly_right.js"></script>
+  <script src="./blockly/blocks/tello/fly_up.js"></script>
+  <script src="./blockly/blocks/tello/fly_down.js"></script>
+  <script src="./blockly/blocks/tello/yaw_right.js"></script>
+  <script src="./blockly/blocks/tello/yaw_left.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/tello.css">
   <link rel="stylesheet" type="text/css" href="./blockly/prettify.css">
   
   <!-- Material -->
@@ -65,7 +59,7 @@
     <li class="divider"></li>
     <li><a href="#" id="newMission">New Mission</a></li>
     <li class="divider"></li>
-    <li><a href="#" id="previewMission">Preview Mission</a></li>
+    <li><a href="#" id="launchMission">Launch Mission</a></li>
     <li class="divider"></li>
     <li><a href="#" id="showCode">Show Mission Code</a></li>
     <li class="divider"></li>
@@ -117,78 +111,68 @@
   <xml id="toolbox" style="display: none">
     <category name="Takeoff">
       <block type="takeoff">
-        <value name="altitude">
-          <block type="math_number">
-            <field name="NUM">25</field>
-          </block>
-        </value>
       </block>
-      <!--<block type="flight_path"></block>-->
-      <!--<block type="heading_mode"></block>-->
     </category>
-    <category name="Navigation">
+    <category name="Fly">
       <block type="fly_forward">
         <value name="distance">
-          <block type="math_number">
-            <field name="NUM">25</field>
-          </block>
-        </value>
-      </block>
-      <block type="change_altitude">
-        <value name="altitude">
-          <block type="math_number">
-            <field name="NUM">25</field>
-          </block>
-        </value>
-      </block>
-      <block type="hover">
-        <value name="duration">
-          <block type="math_number">
+          <shadow type="math_number">
             <field name="NUM">5</field>
-          </block>
+          </shadow>
         </value>
       </block>
+      <block type="fly_backward">
+        <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="fly_left">
+        <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="fly_right">
+        <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="fly_up">
+        <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="fly_down">
+        <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
+    </category>
+    <category name="Yaw">
       <block type="yaw_right">
         <value name="angle">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
+          <shadow type="math_number">
+            <field name="NUM">90</field>
+          </shadow>
         </value>
       </block>
       <block type="yaw_left">
         <value name="angle">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
+          <shadow type="math_number">
+            <field name="NUM">90</field>
+          </shadow>
         </value>
       </block>
     </category>
-    <category name="Camera">
-      <block type="pitch_gimbal_to">
-        <value name="angle">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-      </block>
-      <block type="photo"></block>
-      <block type="photo_interval"></block>
-      <block type="video"></block>
-      <block type="video_duration"></block>
-    </category>
-    <category name="Loops">
-      <block type="loop">
-        <value name="TIMES">
-          <block type="math_number">
-            <field name="NUM">3</field>
-          </block>
-        </value>
-      </block>
-    </category>
-    <!--<category name="Flight Modes">
-      <block type="orbit"></block>
-      <block type="follow"></block>
-    </category>-->
     <category name="Logic">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
@@ -207,7 +191,6 @@
     
     <category name="Land">
       <block type="land"></block>
-      <block type="land_home"></block>
     </category>
   </xml>
   
