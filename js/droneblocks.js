@@ -50,6 +50,8 @@ function previewMission() {
   code += Blockly.JavaScript.workspaceToCode(workspace);
   code = eval(code);
   
+  console.log("Mission code: " + code);
+  
   var os = getMobileOS();
   
   if(os == 'iOS') {
