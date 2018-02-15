@@ -62,7 +62,7 @@ function previewMission() {
 
   	Android.confirmMission(code);
     
-  } else {
+  } else if (aircraft == "DJI") {
     
     $("#mapPreviewModal").html("<iframe src='map_preview.html?code=" + escape(code) + "' width='100%' height='100%'></iframe>");
     $("#mapPreviewModal").openModal();
