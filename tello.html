@@ -24,6 +24,11 @@
   <script src="./blockly/blocks/tello/fly_down.js"></script>
   <script src="./blockly/blocks/tello/yaw_right.js"></script>
   <script src="./blockly/blocks/tello/yaw_left.js"></script>
+  <script src="./blockly/blocks/tello/flip_forward.js"></script>
+  <script src="./blockly/blocks/tello/flip_backward.js"></script>
+  <script src="./blockly/blocks/tello/flip_right.js"></script>
+  <script src="./blockly/blocks/tello/flip_left.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="./css/tello.css">
   <link rel="stylesheet" type="text/css" href="./blockly/prettify.css">
   
@@ -111,8 +116,7 @@
 
   <xml id="toolbox" style="display: none">
     <category name="Takeoff">
-      <block type="takeoff">
-      </block>
+      <block type="takeoff"></block>
     </category>
     <category name="Fly">
       <block type="fly_forward">
@@ -173,6 +177,12 @@
           </shadow>
         </value>
       </block>
+    </category>
+    <category name="Flip">
+      <block type="flip_forward"></block>
+      <block type="flip_backward"></block>
+      <block type="flip_left"></block>
+      <block type="flip_right"></block>
     </category>
     <category name="Logic">
       <block type="controls_if"></block>

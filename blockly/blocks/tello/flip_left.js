@@ -1,4 +1,4 @@
-Blockly.Blocks['land'] = {
+Blockly.Blocks['flip_left'] = {
   /**
    * Show block.
    * @this Blockly.Block
@@ -6,9 +6,10 @@ Blockly.Blocks['land'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "land",
+        "message0": "flip left",
+        "nextStatement": true,
         "previousStatement": true,
-        "colour": "#E76F51"
+        "colour": "#E9C46A"
       });
   }
 };

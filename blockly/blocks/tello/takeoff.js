@@ -8,7 +8,7 @@ Blockly.Blocks['takeoff'] = {
       {
         "message0": "takeoff",
         "nextStatement": true,
-        "colour": "#AEE239"
+        "colour": "#264653"
       });
   }
 };
