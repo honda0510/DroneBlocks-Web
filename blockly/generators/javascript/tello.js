@@ -83,9 +83,9 @@ Blockly.JavaScript['hover'] = function(block) {
   var duration = Blockly.JavaScript.valueToCode(block, 'duration', Blockly.JavaScript.ORDER_NONE);
 
   if(isNaN(parseInt(duration))) {
-    return 'mission+="hover," + eval(' + duration + ') + "|";';
+    return 'mission+="|hover," + eval(' + duration + ') + "";';
   } else {
-    return 'mission+="hover,' + duration + '|";';
+    return 'mission+="|hover,' + duration + '";';
   }
 };
 
