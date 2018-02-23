@@ -67,9 +67,23 @@ function previewMission() {
     $("#mapPreviewModal").html("<iframe src='map_preview.html?code=" + escape(code) + "' width='100%' height='100%'></iframe>");
     $("#mapPreviewModal").openModal();
     
+  }  
+}
+
+// This will toggle new view in iOS to allow the user to connect to Tello
+function connectTo(drone) {
+  
+  var os = getMobileOS();
+  
+  if(os == 'iOS') {
+    
+    window.webkit.messageHandlers.observe.postMessage("connectTo" + drone);
+    
   }
   
 }
+
+
 
 // Called from the map preview iframe
 function getMapPreviewCode() {
@@ -184,6 +198,15 @@ $(document).ready(function() {
   
     $("#showCode").click(function() {
       toggleCodeView();
+    });
+    
+    $("#connectTo").click(function(e) {
+      var text = $(e.target).text();
+      if (text.includes("Tello")) {
+        connectTo('Tello');
+      } else {
+        connectTo('DJI');
+      }
     });
   
     $("#saveMission").click(function() {
