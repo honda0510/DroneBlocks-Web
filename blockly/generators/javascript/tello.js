@@ -79,6 +79,16 @@ Blockly.JavaScript['fly_down'] = function(block) {
   }
 };
 
+Blockly.JavaScript['hover'] = function(block) {
+  var duration = Blockly.JavaScript.valueToCode(block, 'duration', Blockly.JavaScript.ORDER_NONE);
+
+  if(isNaN(parseInt(duration))) {
+    return 'mission+="hover," + eval(' + duration + ') + "|";';
+  } else {
+    return 'mission+="hover,' + duration + '|";';
+  }
+};
+
 Blockly.JavaScript['yaw_right'] = function(block) {
   var angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_NONE);
 
@@ -117,4 +127,12 @@ Blockly.JavaScript['flip_right'] = function(block) {
 
 Blockly.JavaScript['land'] = function(block) {
   return 'mission+="|land";';
+};
+
+Blockly.JavaScript['loop'] = function(block) {
+  var loopVar = Blockly.JavaScript.variableDB_.getDistinctName('count', Blockly.Variables.NAME_TYPE);
+  var repeats = Blockly.JavaScript.valueToCode(block, 'TIMES', Blockly.JavaScript.ORDER_NONE);  
+  var branch = Blockly.JavaScript.statementToCode(block, 'DO').trim();
+  var code = "for(var " + loopVar + " = 0; " + loopVar + " < " + repeats + "; " + loopVar + "++){" + branch + "}";
+  return code;  
 };

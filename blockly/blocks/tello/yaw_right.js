@@ -11,7 +11,7 @@ Blockly.Blocks['yaw_right'] = {
         ],
         "previousStatement": true,
         "nextStatement": true,
-        "colour": "#64c2d9"
+        "colour": "#2A9D8F"
       });
   }
 };

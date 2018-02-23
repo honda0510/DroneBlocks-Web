@@ -1,12 +1,12 @@
-Blockly.Blocks['yaw_left'] = {
+Blockly.Blocks['hover'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "yaw left %1 degrees",
+        "message0": "hover for %1 seconds",
         "args0": [
           {
             "type": "input_value",
-            "name": "angle"
+            "name": "duration"
           }
         ],
         "previousStatement": true,

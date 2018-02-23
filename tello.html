@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--<html manifest="droneblocks.appcache">-->
+<!--<html manifest="tello.appcache">-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -22,12 +22,14 @@
   <script src="./blockly/blocks/tello/fly_right.js"></script>
   <script src="./blockly/blocks/tello/fly_up.js"></script>
   <script src="./blockly/blocks/tello/fly_down.js"></script>
+  <script src="./blockly/blocks/tello/hover.js"></script>
   <script src="./blockly/blocks/tello/yaw_right.js"></script>
   <script src="./blockly/blocks/tello/yaw_left.js"></script>
   <script src="./blockly/blocks/tello/flip_forward.js"></script>
   <script src="./blockly/blocks/tello/flip_backward.js"></script>
   <script src="./blockly/blocks/tello/flip_right.js"></script>
   <script src="./blockly/blocks/tello/flip_left.js"></script>
+  <script src="./blockly/blocks/tello/loop_with_variable.js"></script>
   
   <link rel="stylesheet" type="text/css" href="./css/tello.css">
   <link rel="stylesheet" type="text/css" href="./blockly/prettify.css">
@@ -120,7 +122,7 @@
     <category name="Takeoff">
       <block type="takeoff"></block>
     </category>
-    <category name="Fly">
+    <category name="Navigation">
       <block type="fly_forward">
         <value name="distance">
           <shadow type="math_number">
@@ -163,8 +165,13 @@
           </shadow>
         </value>
       </block>
-    </category>
-    <category name="Yaw">
+      <block type="hover">
+        <value name="duration">
+          <shadow type="math_number">
+            <field name="NUM">5</field>
+          </shadow>
+        </value>
+      </block>
       <block type="yaw_right">
         <value name="angle">
           <shadow type="math_number">
@@ -185,6 +192,15 @@
       <block type="flip_backward"></block>
       <block type="flip_left"></block>
       <block type="flip_right"></block>
+    </category>
+    <category name="Loops">
+      <block type="loop">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
     </category>
     <category name="Logic">
       <block type="controls_if"></block>

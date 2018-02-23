@@ -26,7 +26,7 @@ blockly/blocks/droneblocks/video.js
 blockly/blocks/droneblocks/orbit.js
 blockly/blocks/droneblocks/loop.js
 blockly/blocks/droneblocks/follow.js
-droneblocks.css
+css/droneblocks.css
 js/droneblocks.js
 js/missions.js
 js/jquery-2.2.3.min.js
