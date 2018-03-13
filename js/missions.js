@@ -16,13 +16,25 @@ $(document).ready(function() {
     if (user && !userId) {
     
       userId = user.uid;
-    
-      var usersRef = ref.child("droneblocks/users/" + userId + "/missions");
+      
+      var usersRef;
+      
+      if (aircraft == "Tello") {
+        usersRef = ref.child("droneblocks/users/" + userId + "/tello_missions");
+      } else {
+        usersRef = ref.child("droneblocks/users/" + userId + "/missions");
+      }
     
       usersRef.orderByChild("createdAt").on("child_added", function(snapshot) {
       
         var row = '<tr>';
-        row += '<td style="padding-left: 25px"><a href="index.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
+        
+        if (aircraft == "Tello") {
+          row += '<td style="padding-left: 25px"><a href="tello.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
+        } else {
+          row += '<td style="padding-left: 25px"><a href="index.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
+        }
+        
         row += '<td>' + new Date(snapshot.val().createdAt) + '</td>';
         row += '<td>';
         row += '<a href="#!" onClick="shareMission(\'' + snapshot.key +'\');"><i class="material-icons">share</i></a>';
@@ -56,11 +68,24 @@ function deleteMissionConfirm(missionId) {
 function deleteMission() {
   
   // Remove the mission from the user's mission list
-  var usersRef = ref.child("droneblocks/users/" + userId + "/missions/" + missionToBeDeleted);
+  var usersRef;
+  
+  if (aircraft == "Tello") {
+    usersRef = ref.child("droneblocks/users/" + userId + "/tello_missions/" + missionToBeDeleted);
+  } else {
+    usersRef = ref.child("droneblocks/users/" + userId + "/missions/" + missionToBeDeleted); 
+  }
   usersRef.remove();
   
   // Remove the mission 
-  var missionsRef = ref.child("droneblocks/missions/" + missionToBeDeleted);
+  var missionsRef;
+  
+  if (aircraft == "Tello") {
+    missionsRef = ref.child("droneblocks/tello_missions/" + missionToBeDeleted);
+  } else {
+    missionsRef = ref.child("droneblocks/missions/" + missionToBeDeleted);
+  }
+  
   missionsRef.remove(function(error) {
     if(!error) {
       Materialize.toast("Mission deleted successfully", 3000);
@@ -68,7 +93,11 @@ function deleteMission() {
   });
   
   // For now let's just reload the page
-  document.location.href = "missions.html";
+  if (aircraft == "Tello") {
+    document.location.href = "tello_missions.html";
+  } else {
+    document.location.href = "missions.html";
+  }
   
 }
 

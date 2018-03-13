@@ -102,6 +102,7 @@ function initAuth() {
   
 }
 
+// We'll determine if we're saving a DJI mission or a Tello mission
 function saveMission() {
   
   firebase.auth().onAuthStateChanged(function(user) {
@@ -121,7 +122,14 @@ function saveMission() {
           return;
         }
         
-        var missionsRef = ref.child("droneblocks/missions");
+        var missionsRef;
+        
+        if (aircraft == "Tello") {
+          missionsRef = ref.child("droneblocks/tello_missions");
+        } else {
+          missionsRef = ref.child("droneblocks/missions");
+        }
+        
         var missionsRefPush = missionsRef.push({
           title: $("#title").val(),
           missionXML: missionXML,
@@ -132,7 +140,14 @@ function saveMission() {
         // Set the mission id before we save and so we can update this mission later
         missionId = missionsRefPush.key;
         
-        var usersRef = ref.child("droneblocks/users/" + userId + "/missions/" + missionId);
+        var usersRef;
+        
+        if (aircraft == "Tello") {
+          usersRef = ref.child("droneblocks/users/" + userId + "/tello_missions/" + missionId);
+        } else {
+          usersRef = ref.child("droneblocks/users/" + userId + "/missions/" + missionId);
+        }
+        
         usersRef.set({
             title: $("#title").val(),
             createdAt: firebase.database.ServerValue.TIMESTAMP
@@ -146,7 +161,15 @@ function saveMission() {
       // Here we update the mission
       } else {
         
-        var missionsRef = ref.child("droneblocks/missions/" + missionId);
+        var missionsRef;
+        
+        if (aircraft == "Tello") {
+          missionsRef = ref.child("droneblocks/tello_missions/" + missionId);
+        } else {  
+          missionsRef = ref.child("droneblocks/missions/" + missionId);
+        }
+        
+        
         missionsRef.update({
           missionXML: missionXML
         });
