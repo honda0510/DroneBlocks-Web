@@ -38,6 +38,16 @@ Blockly.Python['fly_down'] = function(block) {
   return 'fly("down", ' + distance + ', "' + units + '");\n';
 };
 
+Blockly.Python['fly_xyz'] = function(block) {
+  var xdistance = Blockly.Python.valueToCode(block, 'xdistance', Blockly.JavaScript.ORDER_NONE);
+  var xunits = block.getFieldValue("xunits");
+  var ydistance = Blockly.Python.valueToCode(block, 'ydistance', Blockly.JavaScript.ORDER_NONE);
+  var yunits = block.getFieldValue("yunits");
+  var zdistance = Blockly.Python.valueToCode(block, 'zdistance', Blockly.JavaScript.ORDER_NONE);
+  var zunits = block.getFieldValue("zunits");
+  return 'fly("xyz", ' + xdistance + ', "' + xunits + '", ' + ydistance + ', "' + yunits + '", ' + zdistance + ', "' + zunits + '");\n';
+};
+
 Blockly.Python['yaw_right'] = function(block) {
   var angle = Blockly.Python.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_NONE);
   return 'yaw("right", ' + angle + ');\n';

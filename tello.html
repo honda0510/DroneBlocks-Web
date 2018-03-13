@@ -22,6 +22,7 @@
   <script src="./blockly/blocks/tello/fly_right.js"></script>
   <script src="./blockly/blocks/tello/fly_up.js"></script>
   <script src="./blockly/blocks/tello/fly_down.js"></script>
+  <script src="./blockly/blocks/tello/fly_xyz.js"></script>
   <script src="./blockly/blocks/tello/hover.js"></script>
   <script src="./blockly/blocks/tello/yaw_right.js"></script>
   <script src="./blockly/blocks/tello/yaw_left.js"></script>
@@ -160,6 +161,23 @@
       </block>
       <block type="fly_down">
         <value name="distance">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="fly_xyz">
+        <value name="xdistance">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="ydistance">
+          <shadow type="math_number">
+            <field name="NUM">20</field>
+          </shadow>
+        </value>
+        <value name="zdistance">
           <shadow type="math_number">
             <field name="NUM">20</field>
           </shadow>

@@ -19,6 +19,7 @@ blockly/blocks/tello/fly_left.js
 blockly/blocks/tello/fly_right.js
 blockly/blocks/tello/fly_up.js
 blockly/blocks/tello/fly_down.js
+blockly/blocks/tello/fly_xyz.js
 blockly/blocks/tello/hover.js
 blockly/blocks/tello/yaw_right.js
 blockly/blocks/tello/yaw_left.js
@@ -45,4 +46,4 @@ NETWORK:
 *
 
 # Auto expire app cache when deploying
-# 03-13-2018
+# 03-13-2018 5:45 PM

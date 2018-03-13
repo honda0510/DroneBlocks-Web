@@ -79,6 +79,43 @@ Blockly.JavaScript['fly_down'] = function(block) {
   }
 };
 
+Blockly.JavaScript['fly_xyz'] = function(block) {
+  var xdistance = Blockly.JavaScript.valueToCode(block, 'xdistance', Blockly.JavaScript.ORDER_NONE);
+  var xunits = block.getFieldValue("xunits");
+  var ydistance = Blockly.JavaScript.valueToCode(block, 'ydistance', Blockly.JavaScript.ORDER_NONE);
+  var yunits = block.getFieldValue("yunits");
+  var zdistance = Blockly.JavaScript.valueToCode(block, 'zdistance', Blockly.JavaScript.ORDER_NONE);
+  var zunits = block.getFieldValue("zunits");
+  
+  var blockString = 'mission+="|fly_xyz,';
+
+  if(isNaN(parseInt(xdistance))) {
+    blockString += '" + eval(' + xdistance + ') + "';
+    blockString += ',' + xunits;
+  } else {
+    blockString += xdistance + ',' + xunits;
+  }
+  
+  if(isNaN(parseInt(ydistance))) {
+    blockString += '," + eval(' + ydistance + ') + "';
+    blockString += ',' + yunits;
+  } else {
+    blockString += ',' + ydistance + ',' + yunits;
+  }
+  
+  if(isNaN(parseInt(zdistance))) {
+    blockString += '," + eval(' + zdistance + ') + "';
+    blockString += ',' + zunits;
+  } else {
+    blockString += ',' + zdistance + ',' + zunits;
+  }
+  
+  blockString += '";';
+  
+  return blockString;
+  
+};
+
 Blockly.JavaScript['hover'] = function(block) {
   var duration = Blockly.JavaScript.valueToCode(block, 'duration', Blockly.JavaScript.ORDER_NONE);
 
