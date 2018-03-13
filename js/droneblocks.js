@@ -266,7 +266,15 @@ $(document).ready(function() {
   
       // This is local and not a global
       var id = getUrlParam("missionId");
-      var missionsRef = ref.child("droneblocks/missions/" + id);
+      
+      var missionsRef;
+      
+      if (aircraft == "Tello") {
+        missionsRef = ref.child("droneblocks/tello_missions/" + id);        
+      } else {
+        missionsRef = ref.child("droneblocks/missions/" + id);
+      }
+      
       
       // Update the mission id global so this mission can be updated
       missionId = id;
