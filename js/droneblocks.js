@@ -175,7 +175,7 @@ $(document).ready(function() {
     
     // Let's reduce the padding to 5px for the category blocks
     // Not the prettiest way but we'll go with it for now
-    if(userAgent.match( /iPhone/i )) {
+    if(userAgent.match( /iPhone/i ) || (userAgent.match( /Android/i ) && userAgent.match( /Mobile\sSafari/i))) {
       $("div#\\:1").css("cssText", "padding: 3px !important");
       $("div#\\:2").css("cssText", "padding: 3px !important");
       $("div#\\:3").css("cssText", "padding: 3px !important");
