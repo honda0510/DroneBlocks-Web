@@ -105,7 +105,7 @@ function shareMission(missionId) {
   $("#shareModal").openModal();
   
   if (aircraft == "Tello") {
-    $("#iPadShareLink").val("droneblocks://?missionId=" + missionId "&aircraft=tello");
+    $("#iPadShareLink").val("droneblocks://?missionId=" + missionId + "&aircraft=tello");
     $("#desktopShareLink").val("https://dev.droneblocks.io/tello.html?share=1&missionId=" + missionId);
   } else {
     $("#iPadShareLink").val("droneblocks://?missionId=" + missionId);
