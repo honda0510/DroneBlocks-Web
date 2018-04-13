@@ -104,7 +104,11 @@ function deleteMission() {
 function shareMission(missionId) {
   $("#shareModal").openModal();
   
-  $("#iPadShareLink").val("droneblocks://?missionId=" + missionId);
-  
-  $("#desktopShareLink").val("https://dev.droneblocks.io?share=1&missionId=" + missionId);
+  if (aircraft == "Tello") {
+    $("#iPadShareLink").val("droneblocks://?missionId=" + missionId "&aircraft=tello");
+    $("#desktopShareLink").val("https://dev.droneblocks.io/tello.html?share=1&missionId=" + missionId);
+  } else {
+    $("#iPadShareLink").val("droneblocks://?missionId=" + missionId);
+    $("#desktopShareLink").val("https://dev.droneblocks.io?share=1&missionId=" + missionId);
+  }
 }
