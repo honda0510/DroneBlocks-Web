@@ -14,6 +14,11 @@ function login() {
     
     // Hide the side bar after button click
     $(".button-collapse").sideNav("hide");
+  
+  } else if (getMobileOS() == 'Android') {
+    
+    // Call the login method in Android WebAppInterface
+    Android.login();
     
   } else {
   
@@ -29,6 +34,13 @@ function loginFromiOS(idToken) {
   var credential = firebase.auth.GoogleAuthProvider.credential(idToken);
   firebase.auth().signInWithCredential(credential).catch(function(error) {
     //Materialize.toast("Error with signinWithCredential", 3000);
+  });
+}
+
+// Called from Android onActivityResult
+function loginFromAndroid(idToken) {
+  var credential = firebase.auth.GoogleAuthProvider.credential(idToken);
+  firebase.auth().signInWithCredential(credential).catch(function(error) {
   });
 }
 

@@ -58,7 +58,7 @@ function previewMission() {
     
     window.webkit.messageHandlers.observe.postMessage(code);
     
-  } else if(os == 'Android') {
+  } else if (os == 'Android') {
 
   	Android.confirmMission(code);
     
