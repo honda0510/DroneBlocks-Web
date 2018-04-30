@@ -20,6 +20,9 @@ function login() {
     // Call the login method in Android WebAppInterface
     Android.login();
     
+    // Hide the side bar after button click
+    $(".button-collapse").sideNav("hide");
+    
   } else {
   
     var provider = new firebase.auth.GoogleAuthProvider();
