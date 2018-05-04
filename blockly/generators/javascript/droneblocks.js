@@ -89,6 +89,39 @@ Blockly.JavaScript['fly_forward'] = function(block) {
   }
 };
 
+Blockly.JavaScript['fly_backward'] = function(block) {
+  var distance = Blockly.JavaScript.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+
+  if(isNaN(parseInt(distance))) {
+    return 'mission+="::fly_backward," + eval(' + distance + ') + ",' + speed + '|";';
+  } else {
+    return 'mission+="::fly_backward,' + distance + ',' + speed + '|";';
+  }
+};
+
+Blockly.JavaScript['fly_right'] = function(block) {
+  var distance = Blockly.JavaScript.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+
+  if(isNaN(parseInt(distance))) {
+    return 'mission+="::fly_right," + eval(' + distance + ') + ",' + speed + '";';
+  } else {
+    return 'mission+="::fly_right,' + distance + ',' + speed + '";';
+  }
+};
+
+Blockly.JavaScript['fly_left'] = function(block) {
+  var distance = Blockly.JavaScript.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+
+  if(isNaN(parseInt(distance))) {
+    return 'mission+="::fly_left," + eval(' + distance + ') + ",' + speed + '";';
+  } else {
+    return 'mission+="::fly_left,' + distance + ',' + speed + '";';
+  }
+};
+
 Blockly.JavaScript['video'] = function(block) {
   var action = block.getFieldValue("video_status");
   return 'mission+="video,' + action + '|";';

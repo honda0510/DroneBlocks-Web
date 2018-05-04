@@ -60,6 +60,24 @@ Blockly.Python['fly_forward'] = function(block) {
   return 'flyForward(' + distance + ', ' + speed + ');\n';
 };
 
+Blockly.Python['fly_backward'] = function(block) {
+  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+  return 'flyBackward(' + distance + ', ' + speed + ');\n';
+};
+
+Blockly.Python['fly_right'] = function(block) {
+  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+  return 'flyRight(' + distance + ', ' + speed + ');\n';
+};
+
+Blockly.Python['fly_left'] = function(block) {
+  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
+  var speed = block.getFieldValue("speed");
+  return 'flyLeft(' + distance + ', ' + speed + ');\n';
+};
+
 Blockly.Python['video'] = function(block) {
   var action = block.getFieldValue("video_status");
   return "video('" + action + "');\n";

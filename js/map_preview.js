@@ -184,7 +184,7 @@ function drawMission() {
   
   // Get the code from the parent container
   var code = parent.getMapPreviewCode()
-  var commands = code.split("|");
+  var commands = code.split("::");
   
   var current_heading = 0;
   var current_location = home_location;
@@ -209,7 +209,7 @@ function drawMission() {
       
       current_altitude = command.split(",")[1];
       
-    } else if (command.indexOf("fly_forward") != -1) {
+    } else if (command.indexOf("fly_") != -1) {
       
       var infoWindowContent = "<strong>Lat:</strong> " + current_location.lat() + "<br />";
       infoWindowContent += "<strong>Lng:</strong> " + current_location.lng() + "<br />";
@@ -218,7 +218,19 @@ function drawMission() {
       var params = command.split(",");
       var dist = params[1];
       
-      current_location = current_location.destinationPoint(current_heading, parseInt(dist));
+      var waypoint_heading = 0;
+      
+      if (command.indexOf("fly_right") != -1) {
+        waypoint_heading = current_heading + 90;
+      } else if (command.indexOf("fly_left") != -1) {
+        waypoint_heading = current_heading - 90;
+      } else if (command.indexOf("fly_backward") != -1) {
+        waypoint_heading = current_heading + 180;
+      } else {
+        waypoint_heading = current_heading;
+      }
+      
+      current_location = current_location.destinationPoint(waypoint_heading, parseInt(dist));
       polyline_coords.push({lat: current_location.lat(), lng: current_location.lng()});
 
       addMarker(current_location, 'marker' + marker_count, false, infoWindowContent);

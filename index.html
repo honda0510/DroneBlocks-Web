@@ -24,6 +24,9 @@
   <script src="./blockly/blocks/droneblocks/photo_interval.js"></script>
   <script src="./blockly/blocks/droneblocks/pitch_gimbal.js"></script>
   <script src="./blockly/blocks/droneblocks/fly_forward.js"></script>
+  <script src="./blockly/blocks/droneblocks/fly_backward.js"></script>
+  <script src="./blockly/blocks/droneblocks/fly_right.js"></script>
+  <script src="./blockly/blocks/droneblocks/fly_left.js"></script>
   <script src="./blockly/blocks/droneblocks/change_altitude.js"></script>
   <script src="./blockly/blocks/droneblocks/video.js"></script>
   <script src="./blockly/blocks/droneblocks/video_duration.js"></script>
@@ -132,6 +135,27 @@
     </category>
     <category name="Navigation">
       <block type="fly_forward">
+        <value name="distance">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <block type="fly_backward">
+        <value name="distance">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <block type="fly_right">
+        <value name="distance">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <block type="fly_left">
         <value name="distance">
           <block type="math_number">
             <field name="NUM">25</field>
