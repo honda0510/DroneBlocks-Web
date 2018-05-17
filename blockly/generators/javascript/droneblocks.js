@@ -105,9 +105,9 @@ Blockly.JavaScript['fly_right'] = function(block) {
   var speed = block.getFieldValue("speed");
 
   if(isNaN(parseInt(distance))) {
-    return 'mission+="::fly_right," + eval(' + distance + ') + ",' + speed + '";';
+    return 'mission+="::fly_right," + eval(' + distance + ') + ",' + speed + '|";';
   } else {
-    return 'mission+="::fly_right,' + distance + ',' + speed + '";';
+    return 'mission+="::fly_right,' + distance + ',' + speed + '|";';
   }
 };
 
@@ -116,9 +116,9 @@ Blockly.JavaScript['fly_left'] = function(block) {
   var speed = block.getFieldValue("speed");
 
   if(isNaN(parseInt(distance))) {
-    return 'mission+="::fly_left," + eval(' + distance + ') + ",' + speed + '";';
+    return 'mission+="::fly_left," + eval(' + distance + ') + ",' + speed + '|";';
   } else {
-    return 'mission+="::fly_left,' + distance + ',' + speed + '";';
+    return 'mission+="::fly_left,' + distance + ',' + speed + '|";';
   }
 };
 
