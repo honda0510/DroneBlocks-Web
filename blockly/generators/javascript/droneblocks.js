@@ -99,6 +99,11 @@ Blockly.JavaScript['video_duration'] = function(block) {
   return 'mission+="video_duration,' + duration + '|";';
 };
 
+Blockly.JavaScript['toggle_leds'] = function(block) {
+  var status = block.getFieldValue("led_status");
+  return 'mission+="toggle_leds,' + status + '|";';
+};
+
 Blockly.JavaScript['orbit'] = function(block) {
   var radius = Blockly.JavaScript.valueToCode(block, 'radius', Blockly.JavaScript.ORDER_NONE);
   var velocity = block.getFieldValue("velocity");

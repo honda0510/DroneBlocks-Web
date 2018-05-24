@@ -70,6 +70,11 @@ Blockly.Python['video_duration'] = function(block) {
   return "video('start', " + duration + ");\n";
 };
 
+Blockly.Python['toggle_leds'] = function(block) {
+  var status = block.getFieldValue("led_status");
+  return "turnLEDs('" + status + "');\n";
+};
+
 Blockly.Python['change_altitude'] = function(block) {
   var altitude = Blockly.Python.valueToCode(block, 'altitude', Blockly.JavaScript.ORDER_NONE);
   return 'change_altitude(' + altitude + ');\n';

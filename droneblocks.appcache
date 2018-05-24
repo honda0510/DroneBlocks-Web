@@ -23,6 +23,8 @@ blockly/blocks/droneblocks/pitch_gimbal.js
 blockly/blocks/droneblocks/fly_forward.js
 blockly/blocks/droneblocks/change_altitude.js
 blockly/blocks/droneblocks/video.js
+blockly/blocks/droneblocks/video_duration.js
+blockly/blocks/droneblocks/toggle_leds.js
 blockly/blocks/droneblocks/orbit.js
 blockly/blocks/droneblocks/loop.js
 blockly/blocks/droneblocks/follow.js
