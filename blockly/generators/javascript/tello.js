@@ -57,17 +57,6 @@ Blockly.JavaScript['fly_right'] = function(block) {
   }
 };
 
-Blockly.JavaScript['fly_left'] = function(block) {
-  var distance = Blockly.JavaScript.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-
-  if(isNaN(parseInt(distance))) {
-    return 'mission+="|fly_left," + eval(' + distance + ') + ",' + units + '";';
-  } else {
-    return 'mission+="|fly_left,' + distance + ',' + units + '";';
-  }
-};
-
 Blockly.JavaScript['fly_up'] = function(block) {
   var distance = Blockly.JavaScript.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
   var units = block.getFieldValue("units");
