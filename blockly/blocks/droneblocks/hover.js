@@ -2,7 +2,7 @@ Blockly.Blocks['hover'] = {
   init: function() {
     this.appendValueInput("duration")
         .setCheck("Number")
-        .appendField("hover for");
+        .appendField("hover ");
     this.appendDummyInput()
         .appendField("seconds");
     this.setInputsInline(true);
