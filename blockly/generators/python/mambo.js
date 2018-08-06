@@ -2,56 +2,34 @@ Blockly.Python['takeoff'] = function(block) {
   return 'takeoff();\n';
 };
 
-Blockly.Python['set_speed'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'speed', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'setSpeed(' + distance + ', "' + units + '");\n';
-};
-
 Blockly.Python['fly_forward'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("forward", ' + distance + ', "' + units + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("forward", ' + time + ');\n';
 };
 
 Blockly.Python['fly_backward'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("backward", ' + distance + ', "' + units + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("backward", ' + time + ');\n';
 };
 
 Blockly.Python['fly_left'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("left", ' + distance + ', "' + units + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("left", ' + time + ');\n';
 };
 
 Blockly.Python['fly_right'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("right", ' + distance + ', "' + units + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("right", ' + time + ');\n';
 };
 
 Blockly.Python['fly_up'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("up", ' + distance + ', "' + units + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("up", ' + time + ');\n';
 };
 
 Blockly.Python['fly_down'] = function(block) {
-  var distance = Blockly.Python.valueToCode(block, 'distance', Blockly.JavaScript.ORDER_NONE);
-  var units = block.getFieldValue("units");
-  return 'fly("down", ' + distance + ', "' + units + '");\n';
-};
-
-Blockly.Python['fly_xyz'] = function(block) {
-  var xdistance = Blockly.Python.valueToCode(block, 'xdistance', Blockly.JavaScript.ORDER_NONE);
-  var xunits = block.getFieldValue("xunits");
-  var ydistance = Blockly.Python.valueToCode(block, 'ydistance', Blockly.JavaScript.ORDER_NONE);
-  var yunits = block.getFieldValue("yunits");
-  var zdistance = Blockly.Python.valueToCode(block, 'zdistance', Blockly.JavaScript.ORDER_NONE);
-  var zunits = block.getFieldValue("zunits");
-  return 'fly("xyz", ' + xdistance + ', "' + xunits + '", ' + ydistance + ', "' + yunits + '", ' + zdistance + ', "' + zunits + '");\n';
+  var time = Blockly.Python.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
+  return 'fly("down", ' + time + ');\n';
 };
 
 Blockly.Python['yaw_right'] = function(block) {
