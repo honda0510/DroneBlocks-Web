@@ -77,7 +77,7 @@ function connectTo(drone) {
   
   if(os == 'iOS') {
     
-    window.webkit.messageHandlers.observe.postMessage("connectTo" + drone);
+    window.webkit.messageHandlers.observe.postMessage("connectTo");
     
   }
   
