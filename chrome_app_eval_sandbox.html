@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+        var messageHandler = function(event) {
+            
+            var evalData = eval(event.data);
+
+            console.log("got message and evaled: " + evalData);
+
+            // Send a reply
+            event.source.postMessage({'reply': 'Sandbox received: ' + evalData}, event.origin);
+        };
+
+        window.addEventListener('message', messageHandler);
+    </script>
+  </body>
+</html>
