@@ -1,6 +1,7 @@
 var socketId;
 var portNum = 9000;
 var aircraft = "Tello";
+var mission = [];
 
 window.addEventListener("load", function() {
   chrome.sockets.udp.create({}, function(socketInfo) {
@@ -23,6 +24,7 @@ function bind() {
         portNum++;
         bind();
       }, 3000);
+
       return;
     }
     
@@ -54,24 +56,25 @@ var commandCounter = 0;
 
 function send() {
 
-  var thisCommand = commands[commandCounter];
+  var thisCommand = mission[commandCounter];
 
   console.log(thisCommand.command + " : " + thisCommand.delay);
-
-  setTimeout(function() {
       
     chrome.sockets.udp.send(socketId, str2ab(thisCommand.command), '127.0.0.1', 8889, function(sendInfo) {
         
-      if(commandCounter < commands.length) {
-        send();
+      if(commandCounter < mission.length) {
         commandCounter++;
+
+        // Delay before sending next command
+        setTimeout(function() {
+          send(); 
+        }, thisCommand.delay);
+
       } else {
         commandCounter = 0;
       }
 
     });
-
-  }, thisCommand.delay);
 
 }
 
@@ -89,7 +92,8 @@ function buildMission() {
   }
 }
 
-var commands = [{
+/*
+var mission = [{
     "command": "command",
     "delay": 1000
   },
@@ -109,4 +113,33 @@ var commands = [{
     "command": "forward 100",
     "delay": 5000
   }
-]
+]*/
+
+
+// Receiver function after data is evaled from the sandbox page
+var messageHandler = function(event) {
+  
+  mission = [{"command":"command", "delay": 1000}];
+  var commands = event.data.split("|");
+
+  // Build the mission
+  for (var i=0; i < commands.length; i++) {
+    var command = commands[i];
+
+    if(command.includes("takeoff")) {
+       mission.push({"command": "takeoff", "delay": 5000});
+    } else if (command.includes("fly_forward")) {
+      var params = command.split(",");
+      var distance = command[1];
+      var units = command[2];
+      mission.push({"command": "forward 100", "delay": 5000});
+    } else if (command.includes("land")) {
+      mission.push({"command": "land", "delay:": 5000});
+    }
+  }
+
+  // Execute the mission
+  send();
+
+};
+window.addEventListener('message', messageHandler);
