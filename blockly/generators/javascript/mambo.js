@@ -2,6 +2,17 @@ Blockly.JavaScript['takeoff'] = function(block) {
   return 'mission+="takeoff";';
 };
 
+Blockly.JavaScript['set_speed'] = function(block) {
+  var distance = Blockly.JavaScript.valueToCode(block, 'speed', Blockly.JavaScript.ORDER_NONE);
+  var units = block.getFieldValue("units");
+
+  if(isNaN(parseInt(distance))) {
+    return 'mission+="|speed," + eval(' + distance + ') + ",' + units + '";';
+  } else {
+    return 'mission+="|speed,' + distance + ',' + units + '";';
+  }
+};
+
 Blockly.JavaScript['fly_forward'] = function(block) {
   var time = Blockly.JavaScript.valueToCode(block, 'time', Blockly.JavaScript.ORDER_NONE);
 
