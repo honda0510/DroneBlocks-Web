@@ -48,32 +48,29 @@ function previewMission() {
   
   var code = 'var mission="";'
   code += Blockly.JavaScript.workspaceToCode(workspace);
-
+  code = eval(code);
   console.log(code);
   
   var os = getMobileOS();
   
   if(os == 'iOS') {
     
-    code = eval(code);
     window.webkit.messageHandlers.observe.postMessage(code);
     
   } else if (os == 'Android') {
 
-    code = eval(code);
   	Android.confirmMission(code);
     
   } else if (aircraft == "DJI") {
     
-    code = eval(code);
     $("#mapPreviewModal").html("<iframe src='map_preview.html?code=" + escape(code) + "' width='100%' height='100%'></iframe>");
     $("#mapPreviewModal").openModal();
   
   // Chrome App case
   }  else {
-    
-    // Use the sandboxed iframe to do the eval
-    document.getElementById("eval_sandbox").contentWindow.postMessage(code, '*');
+
+    // Appwindow is so we can post to the chrome app
+    appWindow.postMessage(code, appOrigin);
 
   }
 }
