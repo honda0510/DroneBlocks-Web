@@ -12,6 +12,7 @@ blockly/generators/javascript/mambo.js
 blockly/generators/python/mambo.js
 blockly/msg/js/en.js
 blockly/blocks/mambo/takeoff.js
+blockly/blocks/tello/speed.js
 blockly/blocks/mambo/land.js
 blockly/blocks/mambo/fly_forward.js
 blockly/blocks/mambo/fly_backward.js
