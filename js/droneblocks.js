@@ -76,7 +76,7 @@ function previewMission() {
 }
 
 // This will toggle new view in iOS to allow the user to connect to Tello
-function connectTo(drone) {
+function connectTo() {
   
   var os = getMobileOS();
   
@@ -84,6 +84,17 @@ function connectTo(drone) {
     
     window.webkit.messageHandlers.observe.postMessage("connectTo");
     
+  } else if (os == 'Android') {
+
+  // Chrome App
+  } else if (os == 'unknown') {
+
+    if (document.location.href.match(/chrome_app/i)) {
+      document.location.href = "index.html";
+    } else {
+      document.location.href = "chrome_app.html";
+    }
+
   }
   
 }
@@ -212,13 +223,17 @@ $(document).ready(function() {
     });
     
     $("#connectTo").click(function(e) {
-      var text = $(e.target).text();
-      if (text.includes("Tello")) {
-        connectTo('Tello');
-      } else {
-        connectTo('DJI');
-      }
+      connectTo();
     });
+
+    // Case for Chrome App since Parrot will not be an option
+    if (userAgent.match( /Chrome/i )) {
+      if (document.location.href.match (/chrome_app/i)) {
+        $("#connectTo").text("Connect to DJI");
+      } else {
+        $("#connectTo").text("Connect to Tello");
+      }
+    }
   
     $("#saveMission").click(function() {
       
