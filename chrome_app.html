@@ -117,6 +117,26 @@
     <pre id="code" class="prettyprint linenums"></pre>
   </div>
 
+  <!-- Connect to Tello modal -->
+  <div id="connectToTelloModal" class="modal" style="width: 600px !important; height: 400px !important">
+    <div class="modal-content">
+      <h4>Tello Connection Instructions</h4>
+      <br />
+      <ol>
+        <li>Power up Tello.</li>
+        <li>Go to your computer's network settings and look for the Tello network.</li>
+        <li>Connect to the Tello network. No password will be required.</li>
+        <li>Wait a few seconds for the network connection to be established.</li>
+        <li>Click the Connect button below and you should see Tello's battery percentage in the top left of DroneBlocks.</li>
+      </ol>
+    </div>
+    
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action waves-effect waves-light btn z-depth-0" id="connectButton">Connect</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-light btn-flat">Cancel</a>
+    </div>
+  </div>
+
   <div id="blocklyDiv" style="position: absolute"></div>
 
   <xml id="toolbox" style="display: none">
@@ -251,6 +271,6 @@
   <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="./js/droneblocks.js?1"></script>
   <script type="text/javascript" src="./js/firebase.js"></script>
-  <script type="text/javascript" src="./js/chrome_app.js"></script>
+  <script type="text/javascript" src="./js/chrome_app.js?4"></script>
 </body>
 </html>
