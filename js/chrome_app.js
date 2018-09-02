@@ -16,6 +16,5 @@ function onMessage(e) {
 $("#connectButton").click(function() {
   // Appwindow is so we can post to the chrome app
   appWindow.postMessage("beginTelloConnection", appOrigin);
-
   $("#connectToTelloModal").closeModal();
 });

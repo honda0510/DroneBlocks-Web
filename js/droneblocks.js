@@ -90,7 +90,10 @@ function connectTo() {
   } else if (os == 'unknown') {
 
     if (document.location.href.match(/chrome_app/i)) {
-      document.location.href = "index.html";
+      appWindow.postMessage("hideTelemetryBar", appOrigin);
+      setTimeout(function() {
+        document.location.href = "index.html";
+      }, 1000);
     } else {
       document.location.href = "chrome_app.html";
     }
@@ -98,8 +101,6 @@ function connectTo() {
   }
   
 }
-
-
 
 // Called from the map preview iframe
 function getMapPreviewCode() {
