@@ -76,13 +76,13 @@ function previewMission() {
 }
 
 // This will toggle new view in iOS to allow the user to connect to Tello
-function connectTo() {
+function connectTo(drone) {
   
   var os = getMobileOS();
   
   if(os == 'iOS') {
     
-    window.webkit.messageHandlers.observe.postMessage("connectTo");
+    window.webkit.messageHandlers.observe.postMessage("connectTo" + drone);
     
   } else if (os == 'Android') {
 
@@ -224,7 +224,12 @@ $(document).ready(function() {
     });
     
     $("#connectTo").click(function(e) {
-      connectTo();
+      var text = $(e.target).text();
+      if (text.includes("Tello")) {
+        connectTo('Tello');
+      } else {
+        connectTo('DJI');
+      }
     });
 
     // Case for Chrome App since Parrot will not be an option
