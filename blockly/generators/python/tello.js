@@ -46,12 +46,21 @@ Blockly.Python['fly_down'] = function(block) {
 
 Blockly.Python['fly_xyz'] = function(block) {
   var xdistance = Blockly.Python.valueToCode(block, 'xdistance', Blockly.JavaScript.ORDER_NONE);
-  var xunits = block.getFieldValue("xunits");
   var ydistance = Blockly.Python.valueToCode(block, 'ydistance', Blockly.JavaScript.ORDER_NONE);
-  var yunits = block.getFieldValue("yunits");
   var zdistance = Blockly.Python.valueToCode(block, 'zdistance', Blockly.JavaScript.ORDER_NONE);
-  var zunits = block.getFieldValue("zunits");
-  return 'fly("xyz", ' + xdistance + ', "' + xunits + '", ' + ydistance + ', "' + yunits + '", ' + zdistance + ', "' + zunits + '");\n';
+  var units = block.getFieldValue("units");
+  return 'fly("xyz", ' + xdistance + ', ' + ydistance + ', ' + zdistance + ', "' + units + '");\n';
+};
+
+Blockly.Python['curve'] = function(block) {
+  var x1distance = Blockly.Python.valueToCode(block, 'x1distance', Blockly.JavaScript.ORDER_NONE);
+  var y1distance = Blockly.Python.valueToCode(block, 'y1distance', Blockly.JavaScript.ORDER_NONE);
+  var z1distance = Blockly.Python.valueToCode(block, 'z1distance', Blockly.JavaScript.ORDER_NONE);
+  var x2distance = Blockly.Python.valueToCode(block, 'x2distance', Blockly.JavaScript.ORDER_NONE);
+  var y2distance = Blockly.Python.valueToCode(block, 'y2distance', Blockly.JavaScript.ORDER_NONE);
+  var z2distance = Blockly.Python.valueToCode(block, 'z2distance', Blockly.JavaScript.ORDER_NONE);
+  var units = block.getFieldValue("units");
+  return 'curve(' + x1distance + ', ' + y1distance + ', ' + z1distance + ', ' + x2distance + ', ' + y2distance + ', ' + z2distance + ', "' + units + '");\n';
 };
 
 Blockly.Python['yaw_right'] = function(block) {

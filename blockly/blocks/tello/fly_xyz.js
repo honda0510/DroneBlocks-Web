@@ -2,29 +2,15 @@ Blockly.Blocks['fly_xyz'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "fly x %1 %2, y %3 %4, z %5 %6",
+        "message0": "fly to x %1 y %2 z %3 %4",
         "args0": [
           {
             "type": "input_value",
             "name": "xdistance"
           },
           {
-            "type": "field_dropdown",
-            "name": "xunits",
-            "options":
-              [["in", "in"],
-               ["cm", "cm"]]
-          },
-          {
             "type": "input_value",
             "name": "ydistance"
-          },
-          {
-            "type": "field_dropdown",
-            "name": "yunits",
-            "options":
-              [["in", "in"],
-               ["cm", "cm"]]
           },
           {
             "type": "input_value",
@@ -32,7 +18,7 @@ Blockly.Blocks['fly_xyz'] = {
           },
           {
             "type": "field_dropdown",
-            "name": "zunits",
+            "name": "units",
             "options":
               [["in", "in"],
                ["cm", "cm"]]

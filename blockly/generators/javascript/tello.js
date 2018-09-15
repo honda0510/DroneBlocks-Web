@@ -81,35 +81,31 @@ Blockly.JavaScript['fly_down'] = function(block) {
 
 Blockly.JavaScript['fly_xyz'] = function(block) {
   var xdistance = Blockly.JavaScript.valueToCode(block, 'xdistance', Blockly.JavaScript.ORDER_NONE);
-  var xunits = block.getFieldValue("xunits");
   var ydistance = Blockly.JavaScript.valueToCode(block, 'ydistance', Blockly.JavaScript.ORDER_NONE);
-  var yunits = block.getFieldValue("yunits");
   var zdistance = Blockly.JavaScript.valueToCode(block, 'zdistance', Blockly.JavaScript.ORDER_NONE);
-  var zunits = block.getFieldValue("zunits");
+  var units = block.getFieldValue("units");
   
   var blockString = 'mission+="|fly_xyz,';
 
   if(isNaN(parseInt(xdistance))) {
     blockString += '" + eval(' + xdistance + ') + "';
-    blockString += ',' + xunits;
   } else {
-    blockString += xdistance + ',' + xunits;
+    blockString += xdistance;
   }
   
   if(isNaN(parseInt(ydistance))) {
     blockString += '," + eval(' + ydistance + ') + "';
-    blockString += ',' + yunits;
   } else {
-    blockString += ',' + ydistance + ',' + yunits;
+    blockString += ',' + ydistance;
   }
   
   if(isNaN(parseInt(zdistance))) {
     blockString += '," + eval(' + zdistance + ') + "';
-    blockString += ',' + zunits;
   } else {
-    blockString += ',' + zdistance + ',' + zunits;
+    blockString += ',' + zdistance;
   }
   
+  blockString += "," + units;
   blockString += '";';
   
   return blockString;
@@ -118,63 +114,52 @@ Blockly.JavaScript['fly_xyz'] = function(block) {
 
 Blockly.JavaScript['curve'] = function(block) {
   var x1distance = Blockly.JavaScript.valueToCode(block, 'x1distance', Blockly.JavaScript.ORDER_NONE);
-  var x1units = block.getFieldValue("x1units");
   var y1distance = Blockly.JavaScript.valueToCode(block, 'y1distance', Blockly.JavaScript.ORDER_NONE);
-  var y1units = block.getFieldValue("y1units");
   var z1distance = Blockly.JavaScript.valueToCode(block, 'z1distance', Blockly.JavaScript.ORDER_NONE);
-  var z1units = block.getFieldValue("z1units");
-
   var x2distance = Blockly.JavaScript.valueToCode(block, 'x2distance', Blockly.JavaScript.ORDER_NONE);
-  var x2units = block.getFieldValue("x2units");
   var y2distance = Blockly.JavaScript.valueToCode(block, 'y2distance', Blockly.JavaScript.ORDER_NONE);
-  var y2units = block.getFieldValue("y2units");
   var z2distance = Blockly.JavaScript.valueToCode(block, 'z2distance', Blockly.JavaScript.ORDER_NONE);
-  var z2units = block.getFieldValue("z2units");
+  var units = block.getFieldValue("units");
   
   var blockString = 'mission+="|curve,';
 
   if(isNaN(parseInt(x1distance))) {
     blockString += '" + eval(' + x1distance + ') + "';
-    blockString += ',' + x1units;
   } else {
-    blockString += x1distance + ',' + x1units;
+    blockString += x1distance;
   }
   
   if(isNaN(parseInt(y1distance))) {
     blockString += '," + eval(' + y1distance + ') + "';
-    blockString += ',' + y1units;
   } else {
-    blockString += ',' + y1distance + ',' + y1units;
+    blockString += ',' + y1distance;
   }
   
   if(isNaN(parseInt(z1distance))) {
     blockString += '," + eval(' + z1distance + ') + "';
-    blockString += ',' + z1units;
   } else {
-    blockString += ',' + z1distance + ',' + z1units;
+    blockString += ',' + z1distance;
   }
 
   if(isNaN(parseInt(x2distance))) {
     blockString += '," + eval(' + x2distance + ') + "';
-    blockString += ',' + x2units;
   } else {
-    blockString += ',' + x2distance + ',' + x2units;
+    blockString += ',' + x2distance;
   }
   
   if(isNaN(parseInt(y2distance))) {
     blockString += '," + eval(' + y2distance + ') + "';
-    blockString += ',' + y2units;
   } else {
-    blockString += ',' + y2distance + ',' + y2units;
+    blockString += ',' + y2distance;
   }
   
   if(isNaN(parseInt(z2distance))) {
     blockString += '," + eval(' + z2distance + ') + "';
-    blockString += ',' + z2units;
   } else {
-    blockString += ',' + z2distance + ',' + z2units;
+    blockString += ',' + z2distance;
   }  
   
+  blockString += "," + units;
   blockString += '";';
   
   return blockString;
