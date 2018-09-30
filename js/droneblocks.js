@@ -231,15 +231,6 @@ $(document).ready(function() {
         connectTo('DJI');
       }
     });
-
-    // Case for Chrome App since Parrot will not be an option
-    if (userAgent.match( /Chrome/i )) {
-      if (document.location.href.match (/chrome_app/i)) {
-        $("#connectTo").text("Connect to DJI");
-      } else {
-        $("#connectTo").text("Connect to Tello");
-      }
-    }
   
     $("#saveMission").click(function() {
       
