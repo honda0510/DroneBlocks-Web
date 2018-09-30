@@ -28,8 +28,11 @@ $(document).ready(function() {
       usersRef.orderByChild("createdAt").on("child_added", function(snapshot) {
       
         var row = '<tr>';
-        
-        if (aircraft == "Tello") {
+
+        // Detect Chrome App
+        if (document.location.search.match(/chrome_app/i)) {
+          row += '<td style="padding-left: 25px"><a href="chrome_app.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
+        } else if (aircraft == "Tello") {
           row += '<td style="padding-left: 25px"><a href="tello.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
         } else {
           row += '<td style="padding-left: 25px"><a href="index.html?view=1&missionId=' + snapshot.key + '">' + snapshot.val().title + '</a></td>';
