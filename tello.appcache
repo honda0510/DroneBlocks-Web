@@ -38,6 +38,8 @@ js/droneblocks.js
 js/missions.js
 js/jquery-2.2.3.min.js
 js/firebase.js
+js/chrome_app.js
+js/dialogs.js
 blockly/media/sprites.png
 blockly/media/click.mp3
 blockly/media/disconnect.wav
@@ -48,4 +50,4 @@ NETWORK:
 *
 
 # Auto expire app cache when deploying
-# 09-30-2018a
+# 10-01-2018
