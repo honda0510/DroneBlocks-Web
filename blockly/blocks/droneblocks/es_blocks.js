@@ -1,0 +1,1 @@
+Blockly.Msg.TAKEOFF = "quitar a";

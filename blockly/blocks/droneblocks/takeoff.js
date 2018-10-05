@@ -2,7 +2,7 @@ Blockly.Blocks['takeoff'] = {
   init: function() {
     this.appendValueInput("altitude")
     .setCheck("Number")
-    .appendField("takeoff to");
+    .appendField(Blockly.Msg.TAKEOFF);
     this.appendDummyInput().appendField("ft");
     this.setInputsInline(true);
     this.setNextStatement(true);
