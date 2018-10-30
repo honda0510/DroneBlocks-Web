@@ -1,0 +1,26 @@
+{
+  "name": "droneblocks",
+  "version": "1.0.0",
+  "description": "dronblocks app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbaldwin/DroneBlocks-Web.git"
+  },
+  "author": "mrashidbd2000@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbaldwin/DroneBlocks-Web/issues"
+  },
+  "homepage": "https://github.com/dbaldwin/DroneBlocks-Web#readme",
+  "dependencies": {
+    "ws": "^6.1.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}

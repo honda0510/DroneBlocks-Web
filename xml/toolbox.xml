@@ -1,0 +1,98 @@
+<xml>
+    <category name="Takeoff">
+      <block type="takeoff">
+        <value name="altitude">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <!--<block type="flight_path"></block>-->
+      <!--<block type="heading_mode"></block>-->
+    </category>
+    <category name="Navigation">
+      <block type="fly_forward">
+        <value name="distance">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <block type="change_altitude">
+        <value name="altitude">
+          <block type="math_number">
+            <field name="NUM">25</field>
+          </block>
+        </value>
+      </block>
+      <block type="hover">
+        <value name="duration">
+          <block type="math_number">
+            <field name="NUM">5</field>
+          </block>
+        </value>
+      </block>
+      <block type="yaw_right">
+        <value name="angle">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+      <block type="yaw_left">
+        <value name="angle">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </category>
+    <category name="Camera">
+      <block type="pitch_gimbal_to">
+        <value name="angle">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+      <block type="photo"></block>
+      <block type="photo_interval"></block>
+      <block type="video"></block>
+      <block type="video_duration"></block>
+    </category>
+    <category name="Loops">
+      <block type="loop">
+        <value name="TIMES">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </category>
+    <!--<category name="Flight Modes">
+      <block type="orbit"></block>
+      <block type="follow"></block>
+    </category>-->
+    <category name="Logic">
+      <block type="controls_if"></block>
+      <block type="logic_compare"></block>
+      <block type="logic_operation"></block>
+    </category>
+    <category name="Math">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+      <block type="math_arithmetic"></block>
+      <block type="math_number_property"></block>
+      <block type="math_single"></block>
+      <block type="math_trig"></block>
+      <block type="math_constant"></block>
+    </category>
+    <category name="Variables" custom="VARIABLE">
+    </category>
+    
+    <category name="Land">
+      <block type="land"></block>
+      <block type="land_home"></block>
+    </category>
+  </xml>

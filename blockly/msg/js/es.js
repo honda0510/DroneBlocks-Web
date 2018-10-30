@@ -379,3 +379,42 @@ Blockly.Msg.TEXT_APPEND_VARIABLE = Blockly.Msg.VARIABLES_DEFAULT_NAME;
 Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TITLE_ITEM = Blockly.Msg.VARIABLES_DEFAULT_NAME;
 Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
+
+
+// category items
+Blockly.Msg.CATEGORY_TAKEOFF = "Quitarse";
+Blockly.Msg.CATEGORY_NAVIGATION = "Navegación";
+Blockly.Msg.CATEGORY_CAMERA = "Cámara";
+Blockly.Msg.CATEGORY_LOOPS = "Bucles";
+Blockly.Msg.CATEGORY_LOGIC = "Lógica";
+Blockly.Msg.CATEGORY_MATH = "Math";
+Blockly.Msg.CATEGORY_VARIABLES = "Mates";
+Blockly.Msg.CATEGORY_LAND = "Tierra";
+
+// block labels
+Blockly.Msg.NAVIGATION_FLY_FORWARD = "volar hacia adelante";
+Blockly.Msg.NAVIGATION_FT_AT = "pies en";
+Blockly.Msg.NAVIGATION_MPH = "mph";
+Blockly.Msg.NAVIGATION_CHANGE_ALTITUDE = "cambiar altitud a";
+Blockly.Msg.NAVIGATION_HOVER = "flotar ";
+Blockly.Msg.NAVIGATION_SECONDS = "segundos";
+Blockly.Msg.NAVIGATION_YAW_RIGHT = "desvío hacia la derecha";
+Blockly.Msg.NAVIGATION_DEG = "°";
+Blockly.Msg.NAVIGATION_AT = "° a";
+Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/segundo";
+Blockly.Msg.NAVIGATION_YAW_LEFT = "yaw izquierda";
+
+Blockly.Msg.CAMERA_PITCH_GIMBAL = "cardán de tono a";
+Blockly.Msg.CAMERA_DEGREES = "grados";
+Blockly.Msg.CAMERA_TAKE_PHOTO = "tomar foto";
+Blockly.Msg.CAMERA_TAKE = "tomar";
+Blockly.Msg.CAMERA_PHOTOS_WITH = "fotos con";
+Blockly.Msg.CAMERA_SEC_INTERVAL = "intervalo de segundos";
+Blockly.Msg.CAMERA_RECORDING_VIDEO = "grabación de video";
+Blockly.Msg.CAMERA_LIST_START = "comienzo";
+Blockly.Msg.CAMERA_LIST_STOP = "detener";
+Blockly.Msg.CAMERA_RECORD_VIDEO_FOR = "grabar video para";
+Blockly.Msg.CAMERA_RECORD_SECONDS = "segundos";
+
+Blockly.Msg.LAND_LAND = "tierra";
+Blockly.Msg.LAND_RETURN_HOME = "regreso a casa y tierra";

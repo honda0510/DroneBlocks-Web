@@ -2,13 +2,13 @@ Blockly.Blocks['yaw_left'] = {
   init: function() {
     this.appendValueInput("angle")
         .setCheck("Number")
-        .appendField("yaw left");
+        .appendField(Blockly.Msg.NAVIGATION_YAW_LEFT);
     this.appendDummyInput()
-        .appendField("°");
+        .appendField(Blockly.Msg.NAVIGATION_DEG);
     this.appendDummyInput()
-        .appendField("at")
+        .appendField(Blockly.Msg.NAVIGATION_AT)
         .appendField(new Blockly.FieldNumber(30, 1, 100, 1), 'velocity')
-        .appendField("°/sec");
+        .appendField(Blockly.Msg.NAVIGATION_DEG_PER_SEC);
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);

@@ -2,9 +2,10 @@ var isCodeViewOpen = false;
 
 var blocklyArea = document.getElementById('blocklyArea');
 var blocklyDiv = document.getElementById('blocklyDiv');
+
 var workspace = Blockly.inject(blocklyDiv,
     {media: 'blockly/media/',
-     toolbox: document.getElementById('toolbox'),
+     toolbox: toolboxXml,
       zoom:{controls: true,
           startScale: 1.0,
           maxScale: 3,
@@ -45,7 +46,7 @@ function getMobileOS() {
 }
 
 function previewMission() {
-  
+  debugger
   var code = 'var mission="";'
   code += Blockly.JavaScript.workspaceToCode(workspace);
   code = eval(code);

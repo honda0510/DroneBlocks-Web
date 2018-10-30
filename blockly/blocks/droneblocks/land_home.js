@@ -1,7 +1,7 @@
 Blockly.Blocks['land_home'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("return home and land");
+        .appendField(Blockly.Msg.LAND_RETURN_HOME);
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setColour('#E76F51');

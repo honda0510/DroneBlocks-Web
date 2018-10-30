@@ -2,11 +2,11 @@ Blockly.Blocks['fly_forward'] = {
   init: function() {
     this.appendValueInput("distance")
         .setCheck("Number")
-        .appendField("fly forward");
+        .appendField(Blockly.Msg.NAVIGATION_FLY_FORWARD);
     this.appendDummyInput()
-        .appendField("ft at")
+        .appendField(Blockly.Msg.NAVIGATION_FT_AT)
         .appendField(new Blockly.FieldNumber(10, 5, 25, 1), 'speed')
-        .appendField("mph");
+        .appendField(Blockly.Msg.NAVIGATION_MPH);
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);

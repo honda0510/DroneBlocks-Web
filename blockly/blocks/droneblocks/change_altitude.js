@@ -2,9 +2,9 @@ Blockly.Blocks['change_altitude'] = {
   init: function() {
     this.appendValueInput("altitude")
         .setCheck("Number")
-        .appendField("change altitude to");
+        .appendField(Blockly.Msg.NAVIGATION_CHANGE_ALTITUDE);
     this.appendDummyInput()
-        .appendField("ft");
+        .appendField(Blockly.Msg.NAVIGATION_FT_AT);
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
