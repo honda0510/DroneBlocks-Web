@@ -387,8 +387,8 @@ Blockly.Msg.CATEGORY_NAVIGATION = "Navegación";
 Blockly.Msg.CATEGORY_CAMERA = "Cámara";
 Blockly.Msg.CATEGORY_LOOPS = "Bucles";
 Blockly.Msg.CATEGORY_LOGIC = "Lógica";
-Blockly.Msg.CATEGORY_MATH = "Math";
-Blockly.Msg.CATEGORY_VARIABLES = "Mates";
+Blockly.Msg.CATEGORY_MATH = "Mates";
+Blockly.Msg.CATEGORY_VARIABLES = "Variables";
 Blockly.Msg.CATEGORY_LAND = "Tierra";
 
 // block labels
