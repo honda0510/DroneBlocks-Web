@@ -46,7 +46,6 @@ function getMobileOS() {
 }
 
 function previewMission() {
-  debugger
   var code = 'var mission="";'
   code += Blockly.JavaScript.workspaceToCode(workspace);
   code = eval(code);

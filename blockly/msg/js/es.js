@@ -400,7 +400,7 @@ Blockly.Msg.NAVIGATION_HOVER = "flotar ";
 Blockly.Msg.NAVIGATION_SECONDS = "segundos";
 Blockly.Msg.NAVIGATION_YAW_RIGHT = "desvío hacia la derecha";
 Blockly.Msg.NAVIGATION_DEG = "°";
-Blockly.Msg.NAVIGATION_AT = "° a";
+Blockly.Msg.NAVIGATION_AT = "en";
 Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/segundo";
 Blockly.Msg.NAVIGATION_YAW_LEFT = "yaw izquierda";
 

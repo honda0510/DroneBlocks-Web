@@ -410,7 +410,7 @@ Blockly.Msg.NAVIGATION_HOVER = "hover ";
 Blockly.Msg.NAVIGATION_SECONDS = "seconds";
 Blockly.Msg.NAVIGATION_YAW_RIGHT = "yaw right";
 Blockly.Msg.NAVIGATION_DEG = "°";
-Blockly.Msg.NAVIGATION_AT = "° at";
+Blockly.Msg.NAVIGATION_AT = "at";
 Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/sec";
 Blockly.Msg.NAVIGATION_YAW_LEFT = "yaw left";
 

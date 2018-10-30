@@ -13,7 +13,6 @@
   <script src="./blockly/run_prettify.js"></script>
   <script src="./blockly/generators/javascript/droneblocks.js"></script>
   <script src="./blockly/generators/python/droneblocks.js"></script>
-  <!-- <script src="./blockly/msg/js/en.js"></script> -->
   <script src="./blockly/blocks/droneblocks/takeoff.js"></script>
   <script src="./blockly/blocks/droneblocks/land.js"></script>
   <script src="./blockly/blocks/droneblocks/land_home.js"></script>
@@ -40,8 +39,7 @@
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 
-  <script src="./js/loader.js"></script>
-  <script> 
+<script> 
     var aircraft = "DJI";
     // Initialize Firebase
     var config = {
@@ -118,10 +116,10 @@
   </div>
 
   <div id="blocklyDiv" style="position: absolute"></div>
-
-  
   
   <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="./js/firebase.js"></script>
+  <!-- Dynamic scripts loader -->
+  <script src="./js/loader.js"></script>
 </body>
 </html>
