@@ -392,8 +392,11 @@ Blockly.Msg.CATEGORY_VARIABLES = "Variables";
 Blockly.Msg.CATEGORY_LAND = "Tierra";
 
 // block labels
+Blockly.Msg.TAKEOFF_TO = "quitarse a";
+Blockly.Msg.TAKEOFF_FT = "pies";
+
 Blockly.Msg.NAVIGATION_FLY_FORWARD = "volar hacia adelante";
-Blockly.Msg.NAVIGATION_FT_AT = "pies en";
+Blockly.Msg.NAVIGATION_FT_AT = "pies";
 Blockly.Msg.NAVIGATION_MPH = "mph";
 Blockly.Msg.NAVIGATION_CHANGE_ALTITUDE = "cambiar altitud a";
 Blockly.Msg.NAVIGATION_HOVER = "flotar ";

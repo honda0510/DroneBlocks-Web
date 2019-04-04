@@ -379,3 +379,54 @@ Blockly.Msg.TEXT_APPEND_VARIABLE = Blockly.Msg.VARIABLES_DEFAULT_NAME;
 Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TITLE_ITEM = Blockly.Msg.VARIABLES_DEFAULT_NAME;
 Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
+
+// category items
+Blockly.Msg.CATEGORY_TAKEOFF = "離陸";
+Blockly.Msg.CATEGORY_NAVIGATION = "ナビゲーション";
+Blockly.Msg.CATEGORY_CAMERA = "Camera";
+Blockly.Msg.CATEGORY_FLIP = "フリップ";
+Blockly.Msg.CATEGORY_LOOPS = "繰り返し";
+Blockly.Msg.CATEGORY_LOGIC = "論理式";
+Blockly.Msg.CATEGORY_MATH = "数式";
+Blockly.Msg.CATEGORY_VARIABLES = "変数";
+Blockly.Msg.CATEGORY_LAND = "着陸";
+
+// block labels
+Blockly.Msg.TAKEOFF_TO = "離陸";
+Blockly.Msg.TAKEOFF_FT = "ft";
+
+Blockly.Msg.NAVIGATION_SET_SPEED = "スピード設定";
+Blockly.Msg.NAVIGATION_FLY_FORWARD = "前進";
+Blockly.Msg.NAVIGATION_FLY_BACKWARD = "後退";
+Blockly.Msg.NAVIGATION_FLY_LEFT = "後退";
+Blockly.Msg.NAVIGATION_FLY_RIGHT = "後退";
+Blockly.Msg.NAVIGATION_FT_AT = "ft at";
+Blockly.Msg.NAVIGATION_MPH = "mph";
+Blockly.Msg.NAVIGATION_CHANGE_ALTITUDE = "change altitude to";
+Blockly.Msg.NAVIGATION_HOVER = "hover ";
+Blockly.Msg.NAVIGATION_SECONDS = "seconds";
+Blockly.Msg.NAVIGATION_YAW_RIGHT = "yaw right";
+Blockly.Msg.NAVIGATION_DEG = "°";
+Blockly.Msg.NAVIGATION_AT = "at";
+Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/sec";
+Blockly.Msg.NAVIGATION_YAW_LEFT = "yaw left";
+
+Blockly.Msg.CAMERA_PITCH_GIMBAL = "pitch gimbal to";
+Blockly.Msg.CAMERA_DEGREES = "degrees";
+Blockly.Msg.CAMERA_TAKE_PHOTO = "take photo";
+Blockly.Msg.CAMERA_TAKE = "take";
+Blockly.Msg.CAMERA_PHOTOS_WITH = "photos with";
+Blockly.Msg.CAMERA_SEC_INTERVAL = "sec interval";
+Blockly.Msg.CAMERA_RECORDING_VIDEO = "recording video";
+Blockly.Msg.CAMERA_LIST_START = "start";
+Blockly.Msg.CAMERA_LIST_STOP = "stop";
+Blockly.Msg.CAMERA_RECORD_VIDEO_FOR = "record video for";
+Blockly.Msg.CAMERA_RECORD_SECONDS = "seconds";
+
+Blockly.Msg.FLIP_FORWARD = "flip forward";
+Blockly.Msg.FLIP_FORWARD = "flip backward";
+Blockly.Msg.FLIP_FORWARD = "flip left";
+Blockly.Msg.FLIP_FORWARD = "flip right";
+
+Blockly.Msg.LAND_LAND = "land";
+Blockly.Msg.LAND_RETURN_HOME = "return home and land";

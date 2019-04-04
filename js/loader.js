@@ -2,9 +2,10 @@ var toolboxXml;
 
 $(function() {
     const lang = findLanguage();
+    const aircraftType = findAircraftType();
     loadScript('./blockly/msg/js/' + lang + '.js', 'script')
     .then((script) => {
-        return loadScript('./xml/toolbox.xml', 'xml');
+        return loadScript('./xml/' + aircraftType + '_toolbox.xml', 'xml');
     })
     .then((xmlDoc) => {
         updateToolbox(xmlDoc);
@@ -21,6 +22,7 @@ function updateToolbox(xmlDoc) {
     Array.from(xmlDoc.getElementsByTagName('category')).forEach(category => {
         const name = category.getAttribute('name');
         const value = Blockly.Msg['CATEGORY_' + name.toUpperCase()];
+        console.log(name + ":" + value);
         category.setAttribute('name', value);
     });
     toolboxXml = new XMLSerializer().serializeToString(xmlDoc);
@@ -50,4 +52,14 @@ function findLanguage() {
         lang = keyValues[1];
     }
     return lang;
+}
+
+function findAircraftType() {
+    let aircraftType = "dji";
+    
+    if (document.location.href.toLowerCase().includes("tello")) {
+        return "tello";
+    }
+
+    return aircraftType;
 }
