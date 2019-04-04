@@ -2,7 +2,7 @@ Blockly.Blocks['fly_right'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "fly right %1 %2",
+        "message0": Blockly.Msg.NAVIGATION_FLY_RIGHT + " %1 %2",
         "args0": [
           {
             "type": "input_value",
