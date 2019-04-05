@@ -6,7 +6,7 @@ Blockly.Blocks['land'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "land",
+        "message0": Blockly.Msg.LAND_LAND,
         "previousStatement": true,
         "colour": "#E76F51"
       });

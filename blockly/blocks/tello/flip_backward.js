@@ -6,7 +6,7 @@ Blockly.Blocks['flip_backward'] = {
   init: function() {
     this.jsonInit(
       {
-        "message0": "flip backward",
+        "message0": Blockly.Msg.FLIP_BACKWARD,
         "nextStatement": true,
         "previousStatement": true,
         "colour": "#64c2d9"

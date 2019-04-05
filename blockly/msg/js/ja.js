@@ -427,10 +427,10 @@ Blockly.Msg.CAMERA_LIST_STOP = "stop";
 Blockly.Msg.CAMERA_RECORD_VIDEO_FOR = "record video for";
 Blockly.Msg.CAMERA_RECORD_SECONDS = "seconds";
 
-Blockly.Msg.FLIP_FORWARD = "flip forward";
-Blockly.Msg.FLIP_FORWARD = "flip backward";
-Blockly.Msg.FLIP_FORWARD = "flip left";
-Blockly.Msg.FLIP_FORWARD = "flip right";
+Blockly.Msg.FLIP_FORWARD = "前方フリップ";
+Blockly.Msg.FLIP_BACKWARD = "後方フリップ";
+Blockly.Msg.FLIP_LEFT = "左フリップ";
+Blockly.Msg.FLIP_RIGHT = "右フリップ";
 
-Blockly.Msg.LAND_LAND = "land";
+Blockly.Msg.LAND_LAND = "着陸";
 Blockly.Msg.LAND_RETURN_HOME = "return home and land";

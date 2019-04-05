@@ -432,9 +432,9 @@ Blockly.Msg.CAMERA_RECORD_VIDEO_FOR = "record video for";
 Blockly.Msg.CAMERA_RECORD_SECONDS = "seconds";
 
 Blockly.Msg.FLIP_FORWARD = "flip forward";
-Blockly.Msg.FLIP_FORWARD = "flip backward";
-Blockly.Msg.FLIP_FORWARD = "flip left";
-Blockly.Msg.FLIP_FORWARD = "flip right";
+Blockly.Msg.FLIP_BACKWARD= "flip backward";
+Blockly.Msg.FLIP_LEFT = "flip left";
+Blockly.Msg.FLIP_RIGHT = "flip right";
 
 Blockly.Msg.LAND_LAND = "land";
 Blockly.Msg.LAND_RETURN_HOME = "return home and land";
