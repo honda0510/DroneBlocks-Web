@@ -89,6 +89,10 @@ Blockly.Python['flip_right'] = function(block) {
   return 'flip("right");\n';
 };
 
+Blockly.Python['land_then_takeoff'] = function(block) {
+  var duration = Blockly.Python.valueToCode(block, 'duration', Blockly.JavaScript.ORDER_NONE);
+  return 'landThenTakeoff(' + duration + ');\n';
+};
 
 Blockly.Python['land'] = function(block) {
   return 'land();\n';
