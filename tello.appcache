@@ -11,6 +11,8 @@ blockly/run_prettify.js
 blockly/generators/javascript/tello.js
 blockly/generators/python/tello.js
 blockly/msg/js/en.js
+blockly/msg/js/es.js
+blockly/msg/js/ja.js
 blockly/blocks/tello/takeoff.js
 blockly/blocks/tello/land.js
 blockly/blocks/tello/land_then_takeoff.js
