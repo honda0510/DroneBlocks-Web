@@ -11,6 +11,7 @@ blockly/run_prettify.js
 blockly/generators/javascript/tello.js
 blockly/generators/python/tello.js
 blockly/msg/js/en.js
+blockly/msg/js/ja.js
 blockly/blocks/tello/takeoff.js
 blockly/blocks/tello/land.js
 blockly/blocks/tello/land_then_takeoff.js
@@ -45,6 +46,7 @@ blockly/media/sprites.png
 blockly/media/click.mp3
 blockly/media/disconnect.wav
 blockly/media/delete.mp3
+translate.js
 
 # Use from network if available
 NETWORK:

@@ -119,9 +119,9 @@ function toggleCodeView() {
     $("#codeView").addClass("block");
     $("#codeViewButton a").html("X");
     $("#code").html(PR.prettyPrintOne(Blockly.Python.workspaceToCode(workspace)));
-    $("#showCode").text("Hide Mission Code");
+    $("#showCode").text("コードを非表示");
   } else {
-    $("#showCode").text("Show Mission Code");
+    $("#showCode").text("コードを表示");
     closeCodeView();
   }
   
