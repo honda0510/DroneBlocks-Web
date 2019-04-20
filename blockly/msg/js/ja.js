@@ -435,4 +435,5 @@ Blockly.Msg.FLIP_LEFT = "左に宙返り";
 Blockly.Msg.FLIP_RIGHT = "右に宙返り";
 
 Blockly.Msg.LAND_LAND = "着陸";
+Blockly.Msg.LAND_LAND_THEN_TAKEOFF = "%1 秒間着陸してからもう一度離陸";
 Blockly.Msg.LAND_RETURN_HOME = "return home and land";

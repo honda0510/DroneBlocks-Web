@@ -446,6 +446,7 @@ Blockly.Msg.FLIP_LEFT = "flip left";
 Blockly.Msg.FLIP_RIGHT = "flip right";
 
 Blockly.Msg.LAND_LAND = "land";
+Blockly.Msg.LAND_LAND_THEN_TAKEOFF = "land for %1 seconds then takeoff";
 Blockly.Msg.LAND_RETURN_HOME = "return home and land";
 
 
