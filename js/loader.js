@@ -61,7 +61,7 @@ function findLanguage() {
 function findAircraftType() {
     let aircraftType = "dji";
     
-    if (document.location.href.toLowerCase().includes("tello")) {
+    if (location.pathname.includes("tello") || location.pathname.includes("chrome_app")) {
         return "tello";
     }
 
