@@ -392,6 +392,7 @@ Blockly.Msg.CATEGORY_VARIABLES = "Variables";
 Blockly.Msg.CATEGORY_LAND = "Tierra";
 
 // block labels
+Blockly.Msg.TAKEOFF = "quitarse";
 Blockly.Msg.TAKEOFF_TO = "quitarse a";
 Blockly.Msg.TAKEOFF_FT = "pies";
 

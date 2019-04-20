@@ -392,6 +392,7 @@ Blockly.Msg.CATEGORY_VARIABLES = "変数";
 Blockly.Msg.CATEGORY_LAND = "着陸";
 
 // block labels
+Blockly.Msg.TAKEOFF = "離陸";
 Blockly.Msg.TAKEOFF_TO = "離陸";
 Blockly.Msg.TAKEOFF_FT = "ft";
 

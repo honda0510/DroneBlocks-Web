@@ -403,6 +403,7 @@ Blockly.Msg.CATEGORY_VARIABLES = "Variables";
 Blockly.Msg.CATEGORY_LAND = "Land";
 
 // block labels
+Blockly.Msg.TAKEOFF = "takeoff";
 Blockly.Msg.TAKEOFF_TO = "takeoff to";
 Blockly.Msg.TAKEOFF_FT = "ft";
 
