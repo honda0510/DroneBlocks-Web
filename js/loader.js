@@ -46,11 +46,15 @@ function loadScript(url, dataType) {
 
 function findLanguage() {
     let lang = 'en';
+
     const searchStr = location.search.substr(1);
-    const keyValues = searchStr.split('=');
-    if (keyValues.length && keyValues[0] === 'language') {
-        lang = keyValues[1];
-    }
+    searchStr.split("&").forEach(keyValue => {
+        const keyValues = keyValue.split('=');
+        if (keyValues.length && keyValues[0] === 'language') {
+            lang = keyValues[1];
+        }        
+    });
+
     return lang;
 }
 
