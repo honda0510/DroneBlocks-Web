@@ -407,6 +407,7 @@ Blockly.Msg.NAVIGATION_DEG = "°";
 Blockly.Msg.NAVIGATION_AT = "en";
 Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/segundo";
 Blockly.Msg.NAVIGATION_YAW_LEFT = "yaw izquierda";
+Blockly.Msg.NAVIGATION_DEGREES = "grados";
 
 Blockly.Msg.CAMERA_PITCH_GIMBAL = "cardán de tono a";
 Blockly.Msg.CAMERA_DEGREES = "grados";

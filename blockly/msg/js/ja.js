@@ -415,6 +415,7 @@ Blockly.Msg.NAVIGATION_DEG = "°";
 Blockly.Msg.NAVIGATION_AT = "at";
 Blockly.Msg.NAVIGATION_DEG_PER_SEC = "°/sec";
 Blockly.Msg.NAVIGATION_YAW_LEFT = "左に向きを変える";
+Blockly.Msg.NAVIGATION_DEGREES = "度";
 
 Blockly.Msg.CAMERA_PITCH_GIMBAL = "pitch gimbal to";
 Blockly.Msg.CAMERA_DEGREES = "degrees";
