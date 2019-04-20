@@ -408,6 +408,13 @@ Blockly.Msg.TAKEOFF_FT = "ft";
 
 Blockly.Msg.NAVIGATION_SET_SPEED = "set speed to";
 Blockly.Msg.NAVIGATION_FLY_FORWARD = "fly forward";
+Blockly.Msg.NAVIGATION_FLY_BACKWARD = "fly backward";
+Blockly.Msg.NAVIGATION_FLY_LEFT = "fly left";
+Blockly.Msg.NAVIGATION_FLY_RIGHT = "fly right";
+Blockly.Msg.NAVIGATION_FLY_UP = "fly up";
+Blockly.Msg.NAVIGATION_FLY_DOWN = "fly down";
+Blockly.Msg.NAVIGATION_FLY_TO_XYZ = "fly to";
+Blockly.Msg.NAVIGATION_FLY_CURVE = "curve";
 Blockly.Msg.NAVIGATION_FT_AT = "ft at";
 Blockly.Msg.NAVIGATION_MPH = "mph";
 Blockly.Msg.NAVIGATION_CHANGE_ALTITUDE = "change altitude to";
